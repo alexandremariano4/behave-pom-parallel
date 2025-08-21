@@ -33,7 +33,7 @@ Instalação de dependências:
 pip install -r requirements.txt
 ```
 
-### 3.2 Rodando Selenium Grid via Docker
+### Rodando Selenium Grid via Docker
 
 ```bash
 cd docker
