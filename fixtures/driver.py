@@ -13,12 +13,13 @@ def get_browser():
         browser_option.set_capability('browserName','chrome')
         browser_option.set_capability('platformName','LINUX')
         driver = Remote(
-            command_executor='http://localhost:4444/wd/hub',
+            command_executor='http://localhost:4444',
             options=browser_option
             )
         driver.set_window_size(1920,1080) #fullHD
         driver.maximize_window()
     except:   
+        browser_option.capabilities.pop('platformName')
         driver = Chrome(options=browser_option)  
         driver.set_window_size(2560,1440) #quadHD
         driver.maximize_window()
