@@ -38,6 +38,7 @@ pip install -r requirements.txt
 ```bash
 cd docker
 docker-compose up -d
+docker compose up -d --scale chrome=6 #Para criar diversos containers em paralelo
 ```
 
 - Acessa o Selenium Hub em `http://localhost:4444`
